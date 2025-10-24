@@ -111,6 +111,19 @@
             /* small touches */
             .gold-border{border:1px solid rgba(212,175,55,0.18);padding:10px;border-radius:10px}
 
+            /* Gallery */
+            .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
+            .gallery-item{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.12));}
+            .gallery-item img{width:100%;height:180px;object-fit:cover;display:block}
+            .caption{padding:10px;color:#ddd;font-size:13px}
+
+            @media(max-width:980px){
+                .gallery-grid{grid-template-columns:repeat(2,1fr)}
+            }
+            @media(max-width:680px){
+                .gallery-grid{grid-template-columns:1fr}
+            }
+
         </style>
     </head>
     <body>
@@ -175,6 +188,47 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="galeria">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Galería & Origen</h2>
+                        <p>Imágenes que muestran la tradición, el entorno y la artesanía detrás de nuestros jamones.</p>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <figure class="gallery-item">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Jamón ibérico de bellota en mesa de madera">
+                            <figcaption class="caption">Jamón ibérico de bellota — curación tradicional</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Cerdo ibérico pastando en dehesa">
+                            <figcaption class="caption">Cerdos ibéricos en la dehesa — alimentación natural a base de bellota</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Bodegas de curación de jamones">
+                            <figcaption class="caption">Bodegas de curación — temperatura y tiempo controlados</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Corte profesional de jamón con cuchillo">
+                            <figcaption class="caption">Corte profesional — precisión y técnica</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Utensilios de corte y tabla de presentación elegante">
+                            <figcaption class="caption">Utensilios y presentación — diseño pensado para el servicio</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1526318472351-c75fcf070ee3?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Detalle de la textura de la grasa y la carne del jamón">
+                            <figcaption class="caption">Detalle del jamón — textura, veteado y calidad</figcaption>
+                        </figure>
                     </div>
                 </div>
             </section>
