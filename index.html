@@ -73,7 +73,8 @@
             /* Products grid */
             .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
             .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(212,175,55,0.12);overflow:hidden}
-            .card img{width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+            /* Product images: use contain so white background shows and images don't get cropped */
+            .card img{width:100%;height:220px;object-fit:contain;border-radius:8px;margin-bottom:12px;background:#fff;padding:10px}
             .card h3{margin:0 0 6px;font-size:18px;color:#fff}
             .price{color:var(--gold);font-weight:700}
             .card p{color:#dcdcdc;font-size:14px;margin:0 0 12px}
@@ -176,18 +177,20 @@
                             </div>
                         </div>
 
-                        <div style="flex:1;display:flex;justify-content:flex-end;align-items:center;min-width:260px;">
-                            <div class="gold-border" style="max-width:320px;width:100%">
-                                <img src="https://images.unsplash.com/photo-1604908177522-19b1a14b6b1a?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Jamón ibérico" style="width:100%;height:auto;border-radius:8px;display:block;">
-                                <div style="padding:10px 0;display:flex;justify-content:space-between;align-items:center">
-                                    <div>
-                                        <div style="font-weight:700">Jamón Ibérico Reserva</div>
-                                        <div style="color:var(--muted);font-size:13px">Curación 36 meses · Pieza limitada</div>
+                                    <div style="flex:1;display:flex;justify-content:flex-end;align-items:center;min-width:260px;">
+                                        <div style="max-width:320px;width:100%">
+                                            <!-- Use same card structure as products so both are identical -->
+                                            <article class="card" style="background:linear-gradient(180deg, rgba(212,175,55,0.03), rgba(0,0,0,0.02));">
+                                                <img loading="lazy" src="imagenes/Productos/Jamón Ibérico Reserva.webp" alt="Jamón ibérico reserva">
+                                                <h3>Jamón Ibérico Reserva</h3>
+                                                <p>Curación 36 meses · Pieza limitada</p>
+                                                <div style="display:flex;justify-content:space-between;align-items:center">
+                                                    <div class="price">€249</div>
+                                                    <a class="btn" href="#productos">Comprar</a>
+                                                </div>
+                                            </article>
+                                        </div>
                                     </div>
-                                    <div style="color:var(--gold);font-weight:700">€249</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
